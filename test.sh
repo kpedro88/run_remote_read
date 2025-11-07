@@ -40,10 +40,12 @@ cmsenv
 
 # create macro
 cat << EOF > test.C
+{
 auto file = TFile::Open("$REDIR$LFN");
 file->ls();
-auto tree = (TTree*)file->Get("events");
+auto tree = (TTree*)file->Get("Events");
 tree->Print();
+}
 EOF
 
 # try to read the file

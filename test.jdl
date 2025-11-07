@@ -11,7 +11,7 @@ Error = test_$(Process)_$(Cluster).stderr
 Log = test_$(Process)_$(Cluster).condor
 notification = Never
 x509userproxy = $ENV(X509_USER_PROXY)
-Arguments = -C CMSSW_15_1_0 -L /store/... -X root://cmsxrootd.fnal.gov/
+Arguments = -C CMSSW_15_1_0 -X root://cmsxrootd.fnal.gov/ -L /store/mc/Run3Summer22MiniAODv4/TTto2L2Nu-3Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/MINIAODSIM/130X_mcRun3_2022_realistic_v5-v2/2520000/2d398009-4efa-482e-9eb2-e8917cd9ab69.root
 want_graceful_removal = true
 on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
 on_exit_hold = ( (ExitBySignal == True) || (ExitCode != 0) )

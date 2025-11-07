@@ -9,7 +9,7 @@ echo "CMSSW on Condor"
 export CMSSWVER=""
 export LFN=""
 export REDIR=""
-while getopts "C:L:X" opt; do
+while getopts "C:L:X:" opt; do
 	case "$opt" in
 		C) CMSSWVER="$OPTARG"
 		;;
